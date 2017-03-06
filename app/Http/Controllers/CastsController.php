@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cast;
 use Illuminate\Http\Request;
 
 class CastsController extends Controller
@@ -13,7 +14,10 @@ class CastsController extends Controller
      */
     public function index()
     {
-        return view('casts');
+        // $casts = Cast::where('published', true)->get();
+        $casts = Cast::all();
+
+        return view('casts', compact('casts'));
     }
 
     /**
