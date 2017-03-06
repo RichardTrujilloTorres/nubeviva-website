@@ -15,7 +15,7 @@ class CastsTableSeeder extends Seeder
     {
         Cast::create([
         	'title' => 'Symfony 101',
-        	'description' => 'A symfony 3 introduction.',
+        	'description' => 'A Symfony 3 introduction.',
             'published' => false,
         ]);
 

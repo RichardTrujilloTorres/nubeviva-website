@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Video;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,7 +22,7 @@ class Cast extends Model
     public function publish()
     {
     	$this->published = true;
-    	// $this->published_at = Carbon::now();
+    	$this->published_at = Carbon::now();
     	$this->save();
     }
 
@@ -63,5 +64,9 @@ class Cast extends Model
     // }
 
 
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+    }
 
 }

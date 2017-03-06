@@ -17,7 +17,6 @@ Casts
 				<h5>{{ $cast->title }}</h5>
 				<p>{{ $cast->description }}</p>
 				
-				
 					<ul class="list-group">
 						<li class="list-group-item">
 
