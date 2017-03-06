@@ -15,7 +15,8 @@ class CastsController extends Controller
     public function index()
     {
         // $casts = Cast::where('published', true)->get();
-        $casts = Cast::all();
+        // TODO: paginate
+        $casts = Cast::all(); 
 
         return view('casts', compact('casts'));
     }
