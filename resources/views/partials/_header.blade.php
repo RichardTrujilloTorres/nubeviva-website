@@ -7,7 +7,7 @@
 				<h1 class="title">@yield('intro_title')</h1>
 	            <h4>@yield('intro_phrase', '//')</h4>
 	            <br />
-	            <a href="" class="btn btn-danger btn-raised btn-lg">
+	            <a href="{{ route('casts.index') }}" class="btn btn-danger btn-raised btn-lg">
 					<i class="fa fa-play"></i> Browse Now
 				</a>
 			</div>

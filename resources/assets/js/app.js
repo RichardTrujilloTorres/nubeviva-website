@@ -13,7 +13,8 @@ require('./bootstrap');
  * the application, or feel free to tweak this setup for your needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('cast', require('./components/Video.vue'));
+Vue.component('vue-table', require('./components/Table.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/png" href="../assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>@yield('title') | {{ config('app.name') }}</title>
+	<title>Ouch! | {{ config('app.name') }}</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -19,37 +19,18 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/css/material-kit.css" rel="stylesheet"/>
 
-    <!-- custom App CSS -->
-    <!-- <link href="/css/app.css" rel="stylesheet"/> -->
-
 </head>
 
 <body class="landing-page">
 
 
-    @include('partials._navbar')
+    @include('partials._navbar-public')
 
     <div class="wrapper">
 
-
         
-        @include('partials._header')
+        @include('partials._header-error')
 
-
-		<div class="main main-raised">
-			<div class="container">
-
-
-				<!-- Vue Application -->
-		    	<div class="section text-center section-landing"
-		    		id="app">
-
-					@yield('content')
-
-
-	            </div>
-	        </div>
-		</div>
 
 	    @include('partials._footer')
 
@@ -69,8 +50,5 @@
 
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 	<script src="/assets/js/material-kit.js" type="text/javascript"></script>
-
-	<!-- App -->
-	<script src="/js/app.js"></script>
 
 </html>

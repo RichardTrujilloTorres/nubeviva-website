@@ -13,7 +13,15 @@ Casts
 	<div class="col-sm-8 offset-4">
 
 		@foreach($casts as $cast)
-			<div class="well">
+
+			<cast 
+				title="{{ $cast->title }}" 
+				description="{{ $cast->description }}"
+				published="{{ (bool) $cast->published ? 'true' : 'false' }}"
+				publishedAt="{{ $cast->publishedAt() }}"
+				></cast>
+
+			{{-- <div class="well">
 				<h5>{{ $cast->title }}</h5>
 				<p>{{ $cast->description }}</p>
 				
@@ -30,8 +38,9 @@ Casts
 							
 						</li>
 					</ul>
-				
-			</div>
+			</div> --}}
+
+
 		@endforeach
 
 	</div>
