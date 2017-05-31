@@ -1,4 +1,5 @@
 
 # TODOS
 
-* [] search
+* [] 	search component
+* [x] 	login view 

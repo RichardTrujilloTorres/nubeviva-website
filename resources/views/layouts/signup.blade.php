@@ -27,7 +27,7 @@
 	@include('partials._navbar-public')
 
     <div class="wrapper">
-		<div class="header header-filter" style="background-image: url('/assets/img/backgrounds/clouds-fog.jpeg'); background-size: cover; background-position: top center;">
+		<div class="header header-filter" style="background-image: url('/assets/img/backgrounds/purple-clouds.jpeg'); background-size: cover; background-position: top center;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">

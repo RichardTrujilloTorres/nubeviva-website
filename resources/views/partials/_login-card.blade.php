@@ -1,7 +1,12 @@
 <div class="card card-signup">
-	<form class="form" method="" action="">
+	<form class="form" method="POST" action="{{ route('login') }}">
+
+	{{ csrf_field() }}
+
+
+		<!-- Social login -->
 		<div class="header header-primary text-center">
-			<h4>Sign In</h4>
+			<h4>Social</h4>
 			<div class="social-line">
 				<a href="" class="btn btn-simple btn-just-icon">
 					<i class="fa fa-facebook-square"></i>
@@ -14,41 +19,50 @@
 				</a>
 			</div>
 		</div>
-		<p class="text-divider">Or Be Classical</p>
+
+
+		<p class="text-divider">Email</p>
 		<div class="content">
 
-			<div class="input-group">
-				<span class="input-group-addon">
-					<i class="material-icons">face</i>
-				</span>
-				<input type="text" class="form-control" placeholder="First Name...">
-			</div>
+			<!-- email -->
+			<div class="input-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-			<div class="input-group">
 				<span class="input-group-addon">
 					<i class="material-icons">email</i>
 				</span>
-				<input type="text" class="form-control" placeholder="Email...">
-			</div>
 
-			<div class="input-group">
+                    <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                    @if ($errors->has('email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
+            </div>
+
+
+			<!-- password -->
+            <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }}">
+
 				<span class="input-group-addon">
 					<i class="material-icons">lock_outline</i>
 				</span>
-				<input type="password" placeholder="Password..." class="form-control" />
-			</div>
 
-			<!-- If you want to add a checkbox to this form, uncomment this code
+                    <input id="password" type="password" class="form-control" name="password" value="{{ old('password') }}" required autofocus>
 
-			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="optionsCheckboxes" checked>
-					Subscribe to newsletter
-				</label>
-			</div> -->
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
+            </div>
+
 		</div>
+
 		<div class="footer text-center">
-			<a href="#pablo" class="btn btn-simple btn-primary btn-lg">Get Started</a>
+			<input type="submit" class="btn btn-simple btn-primary btn-lg" 
+				value="Go">
 		</div>
+
 	</form>
 </div>
